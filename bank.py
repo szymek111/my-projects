@@ -91,7 +91,6 @@ def login():
 
 
 
-
 ##################
 ### LOGIN MENU ###
 ##################
@@ -178,7 +177,6 @@ def transfer(self):
         to_transfer.ammount += transfer_cash
         print("Transfer done!")
         input("\nPress Enter to continue...")
-
 
 
 
