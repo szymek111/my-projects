@@ -25,6 +25,7 @@ def read_from_file():
         list_of_members = pickle.load(config_dictionary_file)
         print(list_of_members)
 
+
 read_from_file()
 
 def save_to_file():
