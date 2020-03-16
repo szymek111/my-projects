@@ -11,17 +11,19 @@ class UserRepository:
             print("[1] Check user-list")
             print("###########################")
 
-    def add_new_user(self):
-
-        uniq_no = input("Enter UNIQ_NO: ")
+    def stdin_input(self):
+        uniq_no = len(self._my_list)
         name = input("Enter name: ")
         surname = input("Enter surname: ")
         password = input("Enter password: ")
-        temp_new_user = User(uniq_no, name, surname, password, 0)
+        return uniq_no, name, surname, password, 0
+
+    def create_user(self):
+        temp_new_user = User(self.stdin_input())
         return temp_new_user
 
     def append_user(self, user):
         self._my_list.append(user)
     
-    def show_list_of_members(self):
+    def listing_users(self):
         print(self._my_list)
