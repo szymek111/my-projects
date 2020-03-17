@@ -9,7 +9,7 @@ class App:
     def user_creation(self):
         self.user_repo.append_user(self.user_repo.create_user())
 
-    def showing_users(self):
+    def show_users(self):
         self.user_repo.listing_users()
 
     def handle_user_input(self):

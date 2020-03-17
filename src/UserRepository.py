@@ -11,7 +11,7 @@ class UserRepository:
             print("[1] Check user-list")
             print("###########################")
 
-    def stdin_input(self):
+    def use_stdin(self):
         uniq_no = len(self._my_list)
         name = input("Enter name: ")
         surname = input("Enter surname: ")
@@ -19,7 +19,7 @@ class UserRepository:
         return uniq_no, name, surname, password, 0
 
     def create_user(self):
-        temp_new_user = User(self.stdin_input())
+        temp_new_user = User(self.use_stdin())
         return temp_new_user
 
     def append_user(self, user):
