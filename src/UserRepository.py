@@ -1,9 +1,10 @@
 #userrepository.py
 from user import User
+import json
 
 class UserRepository:
     def __init__(self):
-        self._my_list = []
+        self._users = {}
     
     def print_main_menu(self):
             print("###########################")
@@ -11,19 +12,19 @@ class UserRepository:
             print("[1] Check user-list")
             print("###########################")
 
-    def use_stdin(self):
-        uniq_no = len(self._my_list)
-        name = input("Enter name: ")
-        surname = input("Enter surname: ")
-        password = input("Enter password: ")
-        return uniq_no, name, surname, password, 0
 
-    def create_user(self):
-        temp_new_user = User(self.use_stdin())
-        return temp_new_user
-
-    def append_user(self, user):
-        self._my_list.append(user)
+    def add_user(self, user):
+        uniq_id = len(self._users)
+        self._users[uniq_id] = user
+        print(uniq_id)
+        return uniq_id
     
-    def listing_users(self):
-        print(self._my_list)
+    def list_users(self):
+        print(self._users)
+
+    #def save_to_file(self):
+
+        
+            
+
+
